@@ -1,0 +1,232 @@
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background to keep things professional */
+  color: #333; /* Dark text color for readability */
+  line-height: 1.6;
+}
+
+/* Header */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif; /* Bold, modern font for headers */
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2a9d8f; /* Bold teal color for a pop */
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #264653; /* A contrasting dark blue */
+}
+
+/* Accordion Styles */
+.accordion-content {
+  display: none; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0; /* Collapsed state */
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  padding: 0.5em 0;
+  color: #264653; /* Consistent with the bold heading color */
+  transition: color 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  color: #e76f51; /* Change color on hover */
+}
+
+.accordion-active .accordion-content {
+  display: block;
+  max-height: 500px; /* Arbitrary large value to allow expansion */
+  transition: max-height 0.5s ease-in;
+}
+
+
+
+
+/* Flexbox Container */
+.container {
+  display: flex;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  color: #264653;
+}
+
+/* Skill Bar Styles */
+.skill-bar {
+  margin: 1em 0;
+}
+
+.skill-bar span {
+  font-size: 1.1em;
+}
+
+.bar {
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 0.5em;
+}
+
+.progress {
+  background-color: #2a9d8f;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+/* Custom Colors for Skill Bars */
+.color-one {
+  background-color: #2a9d8f; /* Teal */
+}
+
+.color-two {
+  background-color: #e76f51; /* Coral */
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1; /* This will take up the remaining space */
+  padding: 20px;
+  background-color: #fff;
+}
+
+.main-content h1 {
+  color: #2a9d8f;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sidebar and content on top of each other on small screens */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar takes full width on mobile */
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Links */
+a {
+  color: #e76f51; /* Bold, unexpected coral color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #f4a261; /* Lighter shade on hover for a dynamic effect */
+}
+
+/* Paragraphs and Text */
+p {
+  margin: 1em 0;
+  font-size: 1.1em;
+  color: #444; /* Slightly lighter than the base text color for contrast */
+}
+
+/* Lists */
+ul {
+  list-style-type: square;
+  padding-left: 1.5em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Buttons (for any CTAs you might have) */
+button {
+  background-color: #e76f51;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f4a261;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #2a9d8f; /* Same bold teal as the header for consistency */
+  color: #fff;
+}
+
+/* Bold and unexpected hover effect on headings */
+h1:hover, h2:hover {
+  color: #e76f51; /* Match the bold link color */
+  transition: color 0.3s ease;
+}
+
+/* Add a subtle drop shadow for cards or sections */
+.section-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .container {
+    padding: 1em;
+  }
+}
