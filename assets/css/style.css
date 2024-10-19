@@ -3,26 +3,27 @@ body {
   font-family: 'Roboto', sans-serif; /* Clean, modern font */
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background to keep things professional */
-  color: #333; /* Dark text color for readability */
+  background-color: #2c2c2c; /* Dark grey background */
+  color: #fff; /* Light text for good contrast */
   line-height: 1.6;
 }
 
 /* Header */
 h1, h2 {
   font-family: 'Montserrat', sans-serif; /* Bold, modern font for headers */
+  color: #347928; /* Light color for headings */
   text-transform: uppercase;
   margin-bottom: 0.5em;
 }
 
 h1 {
   font-size: 2.5em;
-  color: #2a9d8f; /* Bold teal color for a pop */
+  color: #347928; /* Bold teal color for a pop */
 }
 
 h2 {
   font-size: 1.8em;
-  color: #264653; /* A contrasting dark blue */
+  color: #347928;/*264653; /* A contrasting dark blue */
 }
 
 /* Accordion Styles */
@@ -36,7 +37,7 @@ h2 {
 .accordion-toggle {
   cursor: pointer;
   padding: 0.5em 0;
-  color: #264653; /* Consistent with the bold heading color */
+  color: #347928; /* Consistent with the bold heading color */
   transition: color 0.3s ease;
 }
 
@@ -62,14 +63,14 @@ h2 {
 /* Sidebar Styles */
 .sidebar {
   width: 250px; /* Fixed width for the sidebar */
-  background-color: #f4f4f4;
+  background-color: #3a3a3a; /* Slightly lighter grey for sidebar */
   padding: 20px;
-  border-right: 2px solid #ccc;
+  border-right: 2px solid #444;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h3 {
-  color: #264653;
+  color: #f4f4f4;;
 }
 
 /* Skill Bar Styles */
@@ -82,7 +83,7 @@ h2 {
 }
 
 .bar {
-  background-color: #ccc;
+  background-color: #444;
   border-radius: 5px;
   overflow: hidden;
   height: 20px;
@@ -99,7 +100,7 @@ h2 {
 
 /* Custom Colors for Skill Bars */
 .color-one {
-  background-color: #2a9d8f; /* Teal */
+  background-color: #347928 /*2a9d8f; /* Teal */
 }
 
 .color-two {
@@ -110,11 +111,11 @@ h2 {
 .main-content {
   flex-grow: 1; /* This will take up the remaining space */
   padding: 20px;
-  background-color: #fff;
+  background-color: #2c2c2c;
 }
 
 .main-content h1 {
-  color: #2a9d8f;
+  color:   #347928;
 }
 
 
@@ -132,6 +133,20 @@ h2 {
   .main-content {
     width: 100%;
   }
+}
+
+
+
+li strong {
+  color: #444; /* Ensure bold text is readable */
+}
+
+li a {
+  color: #e76f51; /* Customize link color inside list items */
+}
+
+li a:hover {
+  color: #f4a261; /* Hover effect for links inside list items */
 }
 
 
@@ -193,8 +208,8 @@ button:hover {
 footer {
   text-align: center;
   padding: 1em 0;
-  background-color: #2a9d8f; /* Same bold teal as the header for consistency */
-  color: #fff;
+  background-color: #3a3a3a; /* Same bold teal as the header for consistency */
+  color: #f4f4f4;
 }
 
 /* Bold and unexpected hover effect on headings */
@@ -209,6 +224,7 @@ h1:hover, h2:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 2em;
+  color: #444;
   margin-bottom: 2em;
 }
 
@@ -229,4 +245,24 @@ h1:hover, h2:hover {
   .container {
     padding: 1em;
   }
+}
+
+.text-white {
+  color: #fff;
+}
+
+/* Flexbox for the profile header */
+.profile-header {
+  display: flex;
+  align-items: center; /* Vertically align the image and name */
+  gap: 20px; /* Add some space between the image and the name */
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  width: 100px; /* Adjust the size of the image */
+  height: 100px; /* Keep the height equal to the width for a circular image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  border: 2px solid #fff; /* Optional: Add a white border around the image */
 }
